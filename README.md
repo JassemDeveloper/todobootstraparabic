@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `subtasks` (
 </pre>
 
 <b>بعدها لاتنسى عمل  العملية التاليه حتى يتم حذف المهام الفرعية عند حذف المهمة الرئيسية </b>
+<br>
 <b> create trigger </b>
 <pre>
 
@@ -45,6 +46,7 @@ COMMIT;
 </pre>
 
 <b> تغير الاعداد التاليه على حسب السيرفر المحلي إلي في جهازك </b>
+<br>
 <b> app/config.php </b>
 <pre>
 
@@ -57,6 +59,7 @@ $dbname = 'to_do';
 </pre>
 
 <b>  اخر خطوة وضع المجلد كامل في مسار السيرفر المحلي مثال  </b>
+<br>
 <b> wampserver path C:\wamp64\www\ </b>
 
 
