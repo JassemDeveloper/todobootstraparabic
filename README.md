@@ -10,6 +10,15 @@
 --
 -- Table structure for table `subtasks`
 --
+DROP TABLE IF EXISTS `tasks`;
+CREATE TABLE `tasks` (
+  `id` int(11) NOT NULL,
+  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `due_date` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `done` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 
 DROP TABLE IF EXISTS `subtasks`;
 CREATE TABLE IF NOT EXISTS `subtasks` (
