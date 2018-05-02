@@ -7,18 +7,11 @@
 <b> بعدها انشاء الجداول التاليه</b>
 <pre>
 
+
+
 --
 -- Table structure for table `subtasks`
 --
-DROP TABLE IF EXISTS `tasks`;
-CREATE TABLE `tasks` (
-  `id` int(11) NOT NULL,
-  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `due_date` date NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `done` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
 
 DROP TABLE IF EXISTS `subtasks`;
 CREATE TABLE IF NOT EXISTS `subtasks` (
@@ -30,9 +23,24 @@ CREATE TABLE IF NOT EXISTS `subtasks` (
   `done` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_t2_1` (`task_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
+
+--
+-- Table structure for table `tasks`
+--
+
+DROP TABLE IF EXISTS `tasks`;
+CREATE TABLE IF NOT EXISTS `tasks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `due_date` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `done` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 </pre>
 
 <b>بعدها لاتنسى عمل  العملية التاليه حتى يتم حذف المهام الفرعية عند حذف المهمة الرئيسية </b>
